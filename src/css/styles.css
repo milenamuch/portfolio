@@ -51,7 +51,7 @@ footer.footer .social-link {
 footer.footer .social-link.icon-email:hover {
   background-color: #d44638;
   text-decoration: none;
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 footer.footer .social-link.icon-linkedin:hover {
@@ -76,7 +76,7 @@ footer.footer .social-link.icon-github:hover {
 }
 
 .icon-lg {
-  width: 32px; 
+  width: 32px;
   height: 32px;
 }
 
@@ -92,17 +92,29 @@ footer.footer .social-link.icon-github:hover {
   font-style: normal;
 }
 
-.animate-blur-in{
-    animation: text-blur-in 4s ease forwards;
+.animate-blur-in {
+  animation: text-blur-in 4s ease forwards;
+}
 
-  }
-  
 .animate-pop-up {
   animation: text-pop-up-tr 1s ease forwards;
 }
 
-.animate-focus-in{
+.animate-focus-in {
   animation: text-focus-in 2s ease forwards;
+}
+
+.img-darker {
+  filter: brightness(0.7);
+}
+
+.transition-brightness {
+  filter: brightness(0.7); /* Valor inicial */
+  transition: filter 0.5s ease-in-out; /* A transição do filtro dura 0.5 segundos */
+}
+
+.transition-brightness:hover {
+  filter: brightness(1); /* Valor quando a classe for aplicada, no caso em hover */
 }
 
 @keyframes text-focus-in {
@@ -119,18 +131,16 @@ footer.footer .social-link.icon-github:hover {
 }
 
 @keyframes text-blur-in {
-    0% {
-      -webkit-filter: blur(12px) opacity(0);
-      filter: blur(12px) opacity(0);
-    }
-    100% {
-      -webkit-filter: blur(0);
-      filter: blur(0);
-      opacity: 1;
-    }
+  0% {
+    -webkit-filter: blur(12px) opacity(0);
+    filter: blur(12px) opacity(0);
   }
-
-.img-darker {
-    filter: brightness(0.7); 
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
 }
-  
+
+
+
